@@ -315,8 +315,8 @@ static void resizeFramebuffer(_GLFWwindow* window)
 {
     if (window->wl.fractionalScale)
     {
-        window->wl.fbWidth = (window->wl.width * window->wl.scalingNumerator) / 120;
-        window->wl.fbHeight = (window->wl.height * window->wl.scalingNumerator) / 120;
+        window->wl.fbWidth = round((window->wl.width * window->wl.scalingNumerator) / 120.0f);
+        window->wl.fbHeight = round((window->wl.height * window->wl.scalingNumerator) / 120.0f);
     }
     else
     {
